@@ -26,12 +26,10 @@ Para conseguir estos objetivos trabajamos sobre las siguientes palancas operativ
 * Visitas
 * Conversión
 * Frecuencia de compra
-* Ticket medio
 * Tasa abandono carrito
 
 ## ENTIDADES Y DATOS
 * Usuarios
-* Clientes
 * Sesiones
 * Eventos
 * Productos
@@ -147,10 +145,9 @@ En cada sesión, de media:
 * Trabajar sobre los productos con alta tasa de abandono de carrito.
 * Trabajar sobre los productos muy vistos pero poco comprados.
 * La compra mediana incluye 5 productos, incrementar este ratio mediante la recomendación.
-* El 90% de los clientes sólo hace una compra.
+* El 90% de los clientes sólo hace una compra. Crear un programa de fidelización para conseguir que los clientes vuelvan a comprar.
 * Crear una newsletter periódica para incrementar la frecuencia de visita.
 * Campañas promocionales sobre los eventos y las fechas que mas ventas se realizan.
-* Crear un programa de fidelización para conseguir que los clientes vuelvan a comprar.
 
 ## 7. SQL
 - Carga de datos transformados desde 03_transformation.ipynb creando una conexión a SQL
