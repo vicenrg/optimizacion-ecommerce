@@ -166,6 +166,3 @@ En cada sesión, de media:
 
 
 
-
-
-
