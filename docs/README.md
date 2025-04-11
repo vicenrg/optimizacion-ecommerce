@@ -17,7 +17,7 @@ Este proyecto de Data Science tiene como objetivo analizar el rendimiento de un 
 Analizar los datos transaccionales para realizar acciones que incrementen visitas, conversiones y ticket medio, y por tanto incrementar la facturación global del ecommerce.
 
 Para conseguir estos objetivos trabajamos sobre las siguientes palancas operativas:
-* Customer journey: cómo podemos optimizar cada uno de los pasos del proceso
+* Customer journey: cómo podemos optimizar cada uno de los pasos del proceso - recorrido que sigue un cliente desde que inicia una sesion hasta que realiza una compra
 * Clientes: cómo podemos usar la info disponible de los clientes para optimizar las campañas que realicemos
 * Productos: cómo podemos optimizar el catálogo de productos e identificar de manera personalizada qué productos tenemos que poner delante de cada cliente
 
