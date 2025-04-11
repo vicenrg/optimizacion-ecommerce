@@ -23,12 +23,13 @@ Para conseguir estos objetivos trabajamos sobre las siguientes palancas operativ
 
 ### FORMULACIÓN DE PREGUNTAS DE INVESTIGACIÓN
 ## KPIS
-* Visitas
-* Conversión
-* Frecuencia de compra
+* Visualizaciones
+* Productos añadidos al carrito
 * Tasa abandono carrito
+* Frecuencia de compra
 
 ## ENTIDADES Y DATOS
+* Fechas
 * Usuarios
 * Sesiones
 * Eventos
