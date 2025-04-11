@@ -1,7 +1,25 @@
 
 ### PROYECTO DE DATA ANALYTICS 'Ecommerce' - ETL - EDA
-Este proyecto tiene como objetivo enseñar las bases de un flujo completo de análisis de datos: desde la adquisición de datos (ETL), el análisis exploratorio (EDA), la descripción estadística, hasta la creación de dashboards en Power BI o Tableau.
+Este proyecto de Data Science tiene como objetivo analizar el rendimiento de un eCommerce mediante técnicas de análisis exploratorio, visualización de datos y modelado, con el fin de extraer insights relevantes para la toma de decisiones empresariales.
 
+### TECNOLOGÍAS UTILIZADAS
+- Python
+- Pandas, NumPy
+- Matplotlib, Seaborn
+- Power BI
+- Jupyter Notebooks
+- VS Code
+- Conda
+- MySQL Workbench
+- GitHub
+
+### OBJETIVO
+Analizar los datos transaccionales para realizar acciones que incrementen visitas, conversiones y ticket medio, y por tanto incrementar la facturación global del ecommerce.
+
+Para conseguir estos objetivos trabajamos sobre las siguientes palancas operativas:
+* Customer journey: cómo podemos optimizar cada uno de los pasos del proceso
+* Clientes: cómo podemos usar la info disponible de los clientes para optimizar las campañas que realicemos
+* Productos: cómo podemos optimizar el catálogo de productos e identificar de manera personalizada qué productos tenemos que poner delante de cada cliente
 
 ### FORMULACIÓN DE PREGUNTAS DE INVESTIGACIÓN
 ## KPIS
@@ -10,7 +28,6 @@ Este proyecto tiene como objetivo enseñar las bases de un flujo completo de an�
 * Frecuencia de compra
 * Ticket medio
 * Tasa abandono carrito
-* LTV
 
 ## ENTIDADES Y DATOS
 * Usuarios
@@ -19,7 +36,7 @@ Este proyecto tiene como objetivo enseñar las bases de un flujo completo de an�
 * Eventos
 * Productos
 
-## PREGUNTAS SEMILLA
+## PREGUNTAS A RESPONDER
 # Sobre el customer journey
 * ¿Cómo es un proceso típico de compra?  
 * ¿Cuántos productos se ven, se añaden al carro, se abandonan y se compran de media en cada sesión?  
@@ -30,7 +47,6 @@ Este proyecto tiene como objetivo enseñar las bases de un flujo completo de an�
 * ¿Cuánto se gasta cada cliente?
 * ¿Hay "mejores clientes" que haya que identificar y tratar de forma diferente?
 * ¿Los clientes repiten compras en los siguientes meses?
-* ¿Cual es el LTV medio de un cliente?
 * ¿Podemos diseñar campañas personalizas al valor del cliente?
 
 # Sobre los productos
@@ -41,12 +57,12 @@ Este proyecto tiene como objetivo enseñar las bases de un flujo completo de an�
 * ¿Hay productos que se saquen recurrentemente del carrito?
 * ¿Se podrían hacer recomendaciones personalizadas de productos para cada cliente?
 
-
-### OBJETIVOS
+### TRABAJOS A REALIZAR
 - Trabajamos sobre una base de datos .db(SQLite) de un Ecommerce de Rusia del sector cosmetico.
-- Crear estructura de directorios y entorno
-- Aplicar un proceso de ETL sobre el conjunto de datos 
-     - Crear estructura de directorios y entorno
+- Creacion de repositorio en GitHub.
+- Crear estructura de directorios y entorno.
+- Aplicar un proceso de ETL sobre el conjunto de datos.
+     - Crear estructura de directorios y entorno.
      - Realizar la extracción (carga y preparación de los datos).
      - Realizar la limpieza de datos.
      - Realizar la transformación de los datos
@@ -56,79 +72,10 @@ Este proyecto tiene como objetivo enseñar las bases de un flujo completo de an�
 - Organizar el proyecto en un repositorio estructurado.
 - Gestionar entornos reproducibles con `environment.yml`.
 
-
-
 ## 1. CREAR ESTRUCTURA DE DIRECTORIOS Y ENTORNO --> 00_project.ipynb
-📦 ecommerce
-│── 📁 docs/                        # Documentación del proyecto
-│   ├── requirements.txt            # Librerías necesarias (pip)
-│   ├── environment.yml             # Dependencias en formato Conda
-│   ├── README.md                   # Descripción general del proyecto
-│
-│── 📁 data/                        # Datos del proyecto
-│   ├── 📁 raw/                     # Datos sin procesar (descargados de fuentes externas)
-│   ├── 📁 processed/               # Datos limpios y transformados
-│   ├── 📁 originals/               # Copias originales de datos clave
-│   ├── 📁 validation/              # Conjuntos de datos para validación
-│
-│── 📁 notebooks/                   # Jupyter Notebooks organizados
-│   ├── 00_project.ipynb            # Notebook con estructura de directorios y entorno
-│   ├── 01_extraction.ipynb         # Notebook con la extracción, carga de datos y preparación del DataFrame
-│   ├── 02_cleaning.ipynb           # Notebook con la limpieza de datos
-│   ├── 03_transformation.ipynb     # Notebook con la transformación de datos
-│   ├── 04_analysis.ipynb           # Notebook con el análisis exploratorio de datos
-│
-│── 📁 src/                         # Código fuente en Python
-│   ├── __init__.py                 # Permite tratar la carpeta como un módulo
-│   ├── 01_extraction.py            # Extracción, carga de datos y preparación del DataFrame
-│   ├── 02_cleaning.py              # Limpieza de datos
-│   ├── 03_transformation.py        # Transformación de datos
-│   ├── 04_analysis.py              # Análisis exploratorio de datos
-│   ├── 📁 utils/                   # Funciones auxiliares y reutilizables
-│
-│── 📁 dashboards/                  # Paneles de visualización
-│   ├── 📁 powerbi/                 # Dashboards de Power BI (.pbix)
-│   ├── 📁 tableau/                 # Dashboards de Tableau
-│
-│── 📁 images/                      # Imagenes del proyecto      
-│
-│── main.py                         # Archivo principal para ejecutar el proyecto
-│── .gitignore                      # Archivos a ignorar en Git
-
-
-# Creación de directorios para el proyecto
-''' Crear proyecto y estructura de directorios en la carpeta 'PROYECTOS'
-conda update conda -y
-conda clean -y --all
-PROYECTO="ecommerce"
-mkdir -p "$PROYECTO"/docs && touch "$PROYECTO"/docs/README.md
-mkdir -p "$PROYECTO"/data/{raw,processed,originals,validation}
-mkdir -p "$PROYECTO"/notebooks && touch "$PROYECTO"/notebooks/{00_project.ipynb,01_extraction.ipynb,02_cleaning.ipynb,03_transformation.ipynb,04_analysis.ipynb}
-mkdir -p "$PROYECTO"/src/utils && touch "$PROYECTO"/src/{__init__.py,01_extraction.py,02_cleaning.py,03_transformation.py,04_analysis.py}
-mkdir -p "$PROYECTO"/dashboards/{powerbi,tableau}
-mkdir -p "$PROYECTO"/images
-touch "$PROYECTO"/{.gitignore,main.py}
-
-# Creación de entorno para el proyecto
-'''Crear un nuevo entorno e instalar los paquetes en Conda // Instalacion del entorno y kernel en la ubicación del entorno
-conda update conda
-conda clean -y --all
-ENTORNO="ecommerce"
-conda deactivate 
-conda env remove -y -n $ENTORNO
-conda create -y -n $ENTORNO numpy pandas matplotlib seaborn statsmodels scikit-learn scipy sqlalchemy jupyter jupyter_client
-conda activate $ENTORNO
-conda install -y -c conda-forge plotly pyjanitor scikit-plot jupyter_contrib_nbextensions
-pip install pipreqs
-python -m ipykernel install --sys-prefix --name $ENTORNO --display-name "Python ($ENTORNO)"
-jupyter kernelspec list
-'''
-
-# Exportar librería y dependencias, archivo environment.yml
-- conda env export > environment.yml --> Exportar archivo
-- conda env create -f environment.yml --> Instalar todos los paquetes y configurar el entorno con el mismo nombre y dependencias especificadas en el archivo.
-
-
+- Creación de directorios para el proyecto
+- Creación de entorno para el proyecto
+- Exportar librería y dependencias, archivo environment.yml
 
 ## 2. EXTRACCIÓN CARGA Y PREPARACIÓN DE LOS DATOS --> 01_extraction.ipynb
 - Importación de librerías
@@ -142,8 +89,6 @@ jupyter kernelspec list
      * Hacer una copia del DataFrame original y guardarla como ecommerce.csv
 - Visualización de los datos
 
-
-
 ## 3. LIMPIEZA DE DATOS --> 02_cleaning.ipynb
 - Importación de librerías
 - Entendiendo el significado de las variables
@@ -154,13 +99,11 @@ jupyter kernelspec list
 - Análisis de nulos
 - Análisis variables cuantitativas
 
-
 ## 4. TRANSFORMACIÓN DE DATOS --> 03_transformation.ipynb
 - Importación de librerías
 - Creación de nuevas variables
 - Reordenar las variables
 - Guardar datos en .pkl y .csv
-
 
 ## 5. ANÁLISIS DE DATOS --> 04_analisis.ipynb
 - Importación de librerías
@@ -181,10 +124,10 @@ jupyter kernelspec list
 - Relacion entre el precio y el volumen de ventas
 - Productos que se eliminan del carrito
 - Cuales son los productos mas vistos
-- Relaion de productos con muchas vistas y pocas compras
-
+- Relacion de productos con muchas vistas y pocas compras
 
 ## 6. CONCLUSIONES
+# Información obtenida:
 En cada sesión, de media:
 
 * KPIs por sesión: Se ven 2.2 productos
@@ -196,5 +139,30 @@ En cada sesión, de media:
 * Conversión: 22% de compra sobre añadidos a carrito
 * Conversión: 13% de compra sobre visualizaciones
 * Facturación media mensual: 125.000€
+
+# Acciones a realizar:
+* Revisar las campañas de publicidad y retargeting para concentrar la inversión en franjas entre las 9 y las 13 y entre las 18 y las 20
+* Concentrar la inversión del período navideño y post-navideño en la semana del black friday
+* Preconfigurar la home con los productos identificados en los análisis como más vistos y más comprados.
+* Trabajar sobre los productos con alta tasa de abandono de carrito.
+* Trabajar sobre los productos muy vistos pero poco comprados.
+* La compra mediana incluye 5 productos, incrementar este ratio mediante la recomendación.
+* El 90% de los clientes sólo hace una compra.
+* Crear una newsletter periódica para incrementar la frecuencia de visita.
+* Campañas promocionales sobre los eventos y las fechas que mas ventas se realizan.
+* Crear un programa de fidelización para conseguir que los clientes vuelvan a comprar.
+
+## 7. SQL
+- Carga de datos transformados desde 03_transformation.ipynb creando una conexión a SQL
+- Querys o consultas sobre las 'PREGUNTAS A RESPONDER'
+- Se guarda Script SQL en la carpeta correspondiente del proyecto con el nombre consultas_ecommerce.sql
+
+## 8. DASHBOARDING
+- Se crea un dashboard en Power Bi donde se muestran los insights obtenidos a traves de los KPIs más importantes
+- Se guarda el dashboard en la estrucutra de directorios con el nombre ecommerce.pbix
+
+![Dashboard1](../images/Dashboard 1.png)
+
+
 
 
