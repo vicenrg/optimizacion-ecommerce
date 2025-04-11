@@ -56,7 +56,7 @@ print(f"Porcentaje de visualizaciones (view) sobre el total de eventos: {porcent
 print(f"Porcentaje de productos añadidos al carrito (cart) sobre el total de visualizaciones (view): {porcentaje_cart_sobre_view:.2f}%")
 print(f"Porcentaje de productos sacados del carrito (remove_from_cart) sobre añadidos al carrito (cart): {porcentaje_remove_sobre_cart:.2f}%")
 print(f"Porcentaje de productos comprados (purchase) sobre añadidos al carrito (cart): {porcentaje_purchase_sobre_cart:.2f}%")
-display(kpis)
+print(kpis)
 
 def funnel_analytics(eventos, color_sequence, title, kpis_data):
     """Crea un gráfico tipo funnel para analizar los eventos."""

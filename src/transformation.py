@@ -51,11 +51,12 @@ def agregar_festivos(df):
 
     # Mostrar registros que coinciden con fechas festivas
     print(f"\nRegistros en cada fecha festiva: \n{df.query('festivo == 1').date.value_counts().sort_index()}")
-    return df
-
+   
     # Filtrar las filas donde la columna 'festivo' sea igual a 1
     print(f"\nRegistros en día de fiesta:")
-    display(df.query('festivo == 1'))
+    print(df.query('festivo == 1'))
+
+    return df
 
 
 def agregar_indicadores_exogenos(df):
@@ -121,10 +122,3 @@ def ejecutar_proceso_transformacion():
 # Ejecutar si se llama desde línea de comandos
 # if __name__ == "__main__":
 #     ejecutar_proceso_transformacion()
-
-
-
-
-
-
-
