@@ -161,14 +161,6 @@ En cada sesión, de media:
 - Se crea un dashboard en Power Bi donde se muestran los insights obtenidos a traves de los KPIs más importantes
 - Se guarda el dashboard en la estrucutra de directorios con el nombre ecommerce.pbix
 
-![Dashboard1](https://github.com/vicenrg/optimizacion-ecommerce/blob/c17b0cde54fa29e53933faed63687e3af71d2b5c/images/Dashboard%201.png)
-
-![Dashboard1](https://github.com/vicenrg/optimizacion-ecommerce/blob/9921cefd739c7e7baf540cd6623be359f6a7aa59/images/Dashboard%202.png)
-
-![Dashboard1](https://github.com/vicenrg/optimizacion-ecommerce/blob/9921cefd739c7e7baf540cd6623be359f6a7aa59/images/Dashboard%202.png)
-
-![Dashboard1](https://github.com/vicenrg/optimizacion-ecommerce/blob/9921cefd739c7e7baf540cd6623be359f6a7aa59/images/Dashboard%202.png)
-
 
 
 
